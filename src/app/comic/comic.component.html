@@ -1,0 +1,19 @@
+<md-sidenav-container>
+
+  <app-toolbar (toggle)="sidenav.toggle()">
+  </app-toolbar>
+
+  <md-sidenav #sidenav mode="over" opened="false">
+    <app-sidenav (random)="sidenav.close()"></app-sidenav>
+  </md-sidenav>
+
+  <div class="app-content">
+    <span *ngIf="stateService.loading" class="loading-indicator">
+    <md-spinner></md-spinner>
+  </span>
+
+    <div *ngIf="stateService.comic">
+      <img [src]="stateService.comic.img" alt="{{stateService.comic.alt}}" />
+    </div>
+  </div>
+</md-sidenav-container>

@@ -1,0 +1,15 @@
+<md-toolbar color="primary">
+  <button md-button *ngIf="stateService.previousComic" (click)="goBack()">
+    Back
+  </button>
+
+  <span class="spacer"></span>
+
+  <span *ngIf="stateService.comic">{{ stateService.comic.safe_title }}</span>
+
+  <span class="spacer"></span>
+
+  <button md-icon-button (click)="toggleSidenav()">
+    <md-icon class="md-icon">more_vert</md-icon>
+  </button>
+</md-toolbar>

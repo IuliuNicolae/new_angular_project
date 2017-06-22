@@ -1,0 +1,19 @@
+<div class="app-sidenav">
+  <md-card *ngIf="stateService.comic">
+    <md-card-header>
+      <md-card-title>
+        <h2>Comic strip explained</h2>
+      </md-card-title>
+    </md-card-header>
+    
+    <md-card-content>
+      <p>{{stateService.comic.alt}}</p>
+    </md-card-content>
+    
+    <md-card-actions class="actions">
+      <button md-raised-button color="primary" (click)="loadRandom()">
+        Load random comic
+      </button>
+    </md-card-actions>
+  </md-card>
+</div>

@@ -1,0 +1,8 @@
+.app-content {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.loading-indicator md-spinner {
+    margin: 50px auto 0;
+}
